@@ -1,22 +1,22 @@
 //RockPaper scissors//
 
 
-function getComputerChoice (){
+function getComputerChoice() {
 
-let computerChoiceArray = ['rock','paper','scissors'];
-let computerChoice = Math.floor(Math.random()*computerChoiceArray.length);
+    let computerChoiceArray = ['rock', 'paper', 'scissors'];
+    let computerChoice = Math.floor(Math.random() * computerChoiceArray.length);
 
-return console.log(computerChoiceArray[computerChoice])
+    return console.log(computerChoiceArray[computerChoice]);
 }
-getComputerChoice()
+getComputerChoice();
 
+document.write("This is a test");
 
+let humanChoice = prompt("Do you choose rock paper or scissors?");
 
-let humanChoice = prompt("Do you choose rock paper or scissors?")
+let computerScore = 0;
 
-let computerScore = 0
-
-let humanScore = 0
+let humanScore = 0;
 
 
 /*function whoWon(computerchoice,humanchoice) {
