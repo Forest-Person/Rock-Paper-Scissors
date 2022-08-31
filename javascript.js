@@ -7,12 +7,17 @@ function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * computerChoiceArray.length);
 
     return console.log(computerChoiceArray[computerChoice]);
-}
+};
 getComputerChoice();
 
-document.write("This is a test");
+getHumanChoice(){
+    
+    let humanChoice = prompt("Do you choose rock paper or scissors?");
+    
+    return humanChoice;
+};
 
-let humanChoice = prompt("Do you choose rock paper or scissors?");
+
 
 let computerScore = 0;
 
