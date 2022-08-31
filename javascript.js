@@ -6,17 +6,18 @@ function getComputerChoice() {
     let computerChoiceArray = ['rock', 'paper', 'scissors'];
     let computerChoice = Math.floor(Math.random() * computerChoiceArray.length);
 
-    return computerChoiceArray[computerChoice]);
+    return computerChoiceArray[computerChoice];
 };
 getComputerChoice();
 
 function getHumanChoice(){
     
     let humanChoice = prompt("Do you choose rock paper or scissors?");
+    lowerCaseChoice = humanChoice.toLowerCase();
     
-    return humanChoice;
+    return console.log(`human chose ${lowerCaseChoice}`)
 };
-
+getHumanChoice();
 
 function playOneRound ( computerChoice, humanChoice) {
 
@@ -24,7 +25,7 @@ function playOneRound ( computerChoice, humanChoice) {
     computerChoice = getHumanChoice();
     humanChoice = getHumanChoice();
 
-    
+
 
 
 
