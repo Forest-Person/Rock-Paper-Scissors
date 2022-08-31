@@ -67,20 +67,23 @@ function playOneRound ( computerChoice, humanChoice) {
 }
 
 
+for(let i = 0; i < 5; i++) {
 
-console.log(playOneRound(getComputerChoice(),getHumanChoice()));
-console.log(`Computer score is: ${computerScore} & Human Score is ${humanScore} `)
+    console.log(playOneRound(getComputerChoice(),getHumanChoice()));
 
-if (computerScore > humanScore) {
-    console.log('COMPUTER WON!');
-} else if (computerScore < humanScore) {
-    console.log('HUMAN WON!');
-
-} else {
-
-    console.log('YOU BOTH TIED!');
 }
 
 
 
 
+console.log(`Computer score is: ${computerScore} & Human Score is ${humanScore} `)
+
+if (computerScore > humanScore) {
+    console.log('COMPUTER WON!');
+
+} else if (computerScore < humanScore) {
+    console.log('HUMAN WON!');
+
+} else {
+    console.log('YOU BOTH TIED!');
+}
