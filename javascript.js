@@ -25,7 +25,7 @@ function playOneRound ( computerChoice, humanChoice) {
 
    
     
-    //Deal with rock case
+    //Deal with rock case,scissors case, and paper case
 
     if (computerChoice == 'rock' && humanChoice == 'scissors') {
         computerScore += 1
