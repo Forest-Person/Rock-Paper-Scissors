@@ -1,5 +1,8 @@
 //RockPaper scissors//
 
+
+
+
 let computerScore = 0;
 let humanScore = 0;
 
@@ -67,11 +70,11 @@ function playOneRound ( computerChoice, humanChoice) {
 }
 
 
-for(let i = 0; i < 5; i++) {
+/*for(let i = 0; i < 5; i++) {
 
-    console.log(playOneRound(getComputerChoice(),getHumanChoice()));
+    console.log(playOneRound(getComputerChoice(),getHumanChoice()));  //Plays the game five rounds
 
-}
+}*/
 
 
 
@@ -87,3 +90,16 @@ if (computerScore > humanScore) {
 } else {
     console.log('YOU BOTH TIED!');
 }
+
+//create node list to listen for any clicks in button container
+//have to loop through the list pparently
+
+btnNodelist = document.querySelectorAll(".btnContainer")
+
+rock = document.querySelector(".rock")
+
+paper = document.querySelector(".paper")
+
+scissors = document.querySelector(".scissors")
+
+btnNodelist.addEventListener('click', () => console.log('pudding time'))
