@@ -1,4 +1,29 @@
 //RockPaper scissors//
+let humanChoice
+
+let rock = document.querySelector(".rock")
+
+let paper = document.querySelector(".paper")
+
+let scissors = document.querySelector(".scissors")
+
+function CheckButtons () {
+
+rock.addEventListener("click",function() { humanChoice = 'rock';
+console.log(humanChoice)})
+
+paper.addEventListener("click",function() { humanChoice = 'paper';
+console.log(humanChoice)})
+
+scissors.addEventListener("click", function() { humanChoice = 'scissors';
+console.log(humanChoice)})
+
+
+}
+
+
+
+
 
 
 
@@ -15,13 +40,16 @@ function getComputerChoice() {
 };
 
 
+
 function getHumanChoice(){
     
-    let humanChoice = prompt("Do you choose rock paper or scissors?");
-    let lowerCaseChoice = humanChoice.toLowerCase(); //need to save the lowercase value in a nother variable because to lower casee does not alter oginial string
+    let humanChoice = CheckButtons()
+    console.log(humanChoice)
     
-    return lowerCaseChoice
+    return humanChoice
 };
+
+getHumanChoice()
 
 
 function playOneRound ( computerChoice, humanChoice) {
@@ -79,7 +107,7 @@ function playOneRound ( computerChoice, humanChoice) {
 
 
 
-console.log(`Computer score is: ${computerScore} & Human Score is ${humanScore} `)
+/*console.log(`Computer score is: ${computerScore} & Human Score is ${humanScore} `)
 
 if (computerScore > humanScore) {
     console.log('COMPUTER WON!');
@@ -89,17 +117,13 @@ if (computerScore > humanScore) {
 
 } else {
     console.log('YOU BOTH TIED!');
-}
+}*/
 
 //create node list to listen for any clicks in button container
 //have to loop through the list pparently
 
-btnNodelist = document.querySelectorAll(".btnContainer")
 
-rock = document.querySelector(".rock")
 
-paper = document.querySelector(".paper")
 
-scissors = document.querySelector(".scissors")
 
-btnNodelist.addEventListener('click', () => console.log('pudding time'))
+

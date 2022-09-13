@@ -35,7 +35,7 @@
     flex-direction: row;
     object-fit: cover;
     width: 100%;
-    max-width: 8rem;
+    max-width: 10rem;
     aspect-ratio: 1;
     border-radius: 10%;
 
