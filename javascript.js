@@ -7,19 +7,34 @@ let paper = document.querySelector(".paper")
 
 let scissors = document.querySelector(".scissors")
 
-function CheckButtons () {
+let yourScore = document.querySelector(".yourScore")
+
+let compScore = document.querySelector(".computerScore")
+
+
+
+
 
 rock.addEventListener("click",function() { humanChoice = 'rock';
-console.log(humanChoice)})
+playOneRound(getComputerChoice(),humanChoice);
+console.log(humanScore,compScore);
+yourScore.textContent = `Your Score = ${humanScore}`;
+compScore.textContent = `Computer's Score =  ${computerScore}`;})
 
 paper.addEventListener("click",function() { humanChoice = 'paper';
-console.log(humanChoice)})
+playOneRound(getComputerChoice(),humanChoice);
+console.log(humanScore,computerScore);
+yourScore.textContent = `Your Score = ${humanScore}`;
+compScore.textContent = `Computer's Score =  ${computerScore}`;})
 
 scissors.addEventListener("click", function() { humanChoice = 'scissors';
-console.log(humanChoice)})
+playOneRound(getComputerChoice(),humanChoice);
+console.log(humanScore,computerScore);
+yourScore.textContent = `Your Score = ${humanScore}`;
+compScore.textContent = `Computer's Score =  ${computerScore}`;})
 
 
-}
+
 
 
 
@@ -41,15 +56,10 @@ function getComputerChoice() {
 
 
 
-function getHumanChoice(){
-    
-    let humanChoice = CheckButtons()
-    console.log(humanChoice)
-    
-    return humanChoice
-};
 
-getHumanChoice()
+
+
+
 
 
 function playOneRound ( computerChoice, humanChoice) {

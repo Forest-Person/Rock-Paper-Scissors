@@ -63,3 +63,16 @@ ul{
     padding-left: 0;
     
 }
+
+.scoreDiv {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+   
+    
+    
+    
+    
+    
+    
+}
