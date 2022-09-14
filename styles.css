@@ -1,3 +1,5 @@
+* { border: 1px solid red; }
+
 
 
 .welcomeContainer {
@@ -26,7 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 .btnContainer img{
@@ -44,7 +46,7 @@
 .imageContainer {
 
     background-color: bisque;
-    padding-bottom: 3rem;
+    padding: 3rem;
 }
 
 img:hover {  /*Makes the image more opaque upon hover 
@@ -66,13 +68,13 @@ ul{
 
 .scoreDiv {
     display: flex;
-    justify-content: space-around;
+    gap:5rem;
+    justify-content: center;
     flex-direction: row;
-   
-    
-    
-    
-    
-    
+    background-color: black;
+    color:rgb(57, 203, 49);
+    padding:2rem;
+    font-size:2rem;
+
     
 }
