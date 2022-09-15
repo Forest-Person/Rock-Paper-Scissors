@@ -1,4 +1,4 @@
-* { border: 1px solid red; }
+/** { border: 1px solid red; }*/
 
 
 
@@ -6,7 +6,7 @@ html {
 
     height: 100vh!important;
     display:flex;
-    
+    background-color: bisque;
     justify-content: center;
     
 }
@@ -34,7 +34,7 @@ body {
     justify-content: center;
     justify-content: space-around;
     font-weight: 900;
-    font-size: x-large;
+    font-size: 3rem;
     background-color: rgb(150, 123, 175);
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .btnContainer {
-
+margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -116,7 +116,7 @@ ul {
     background-color: black;
     color:rgb(57, 203, 49);
     padding:.5rem;
-    font-size:2em;
+    font-size:3em;
     
 
     
