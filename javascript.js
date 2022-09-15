@@ -1,6 +1,8 @@
 //RockPaper scissors//
 let humanChoice;
 
+let computerChoice
+
 let rock = document.querySelector(".rock");
 
 let paper = document.querySelector(".paper");
@@ -15,7 +17,11 @@ let scoreDiv = document.querySelector('.scoreDiv');
 
 let playAgain = document.createElement('button');
 
+playAgain.style.cssText = 'font-size:3rem;background-color:green;border:5px solid light-blue;'
+
 playAgain.textContent = 'Play Again?';
+
+const choiceShow = document.querySelector(".choiceShow")
 
 let humanScore = 0;
 
@@ -29,6 +35,7 @@ playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
+
 if(humanScore === 5 || computerScore === 5){
 
     if(humanScore >= 5) {
@@ -164,13 +171,14 @@ paper.addEventListener('click', function() {
     playAgain.addEventListener('click', function() {
 
         playAgain.remove()
+        choiceShow.remove()
         scissors.style.pointerEvents = 'auto';
         rock.style.pointerEvents = 'auto';
         paper.style.pointerEvents = 'auto';
         computerScore = 0
         humanScore = 0
         yourScore.textContent = `Your Score = ${humanScore}`;
-compScore.textContent = `Computer's Score =  ${computerScore}`;
+        compScore.textContent = `Computer's Score =  ${computerScore}`;
         
 
     });
@@ -180,16 +188,6 @@ document.getElementById('id').style.pointerEvents = 'none';
 // To re-enable:
 document.getElementById('id').style.pointerEvents = 'auto'; 
 */
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -204,16 +202,10 @@ function getComputerChoice() {
 
 
 
-
-
-
-
-
-
 function playOneRound ( computerChoice, humanChoice) {
 
    
-    
+    choiceShow.textContent = `You Chose ${humanChoice}  ------  Computer Chose ${computerChoice}`
     //Deal with rock case,scissors case, and paper case
 
     if (computerChoice == 'rock' && humanChoice == 'scissors') {
@@ -253,35 +245,11 @@ function playOneRound ( computerChoice, humanChoice) {
 
         return 'You tie, you both chose scissors';
     }
+
+   
+    
+
 }
-
-
-/*for(let i = 0; i < 5; i++) {
-
-    console.log(playOneRound(getComputerChoice(),getHumanChoice()));  //Plays the game five rounds
-
-}*/
-
-
-
-
-/*console.log(`Computer score is: ${computerScore} & Human Score is ${humanScore} `)
-
-if (computerScore > humanScore) {
-    console.log('COMPUTER WON!');
-
-} else if (computerScore < humanScore) {
-    console.log('HUMAN WON!');
-
-} else {
-    console.log('YOU BOTH TIED!');
-}*/
-
-//create node list to listen for any clicks in button container
-//have to loop through the list pparently
-
-
-
 
 
 

@@ -46,6 +46,16 @@ body {
     padding: .5rem;
 }
 
+.choiceShow {
+
+    background-color: rgb(7, 1, 12);
+    display: flex;
+    color: rgb(13, 231, 9);
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+}
+
 .btnContainer {
 margin-top: 2rem;
     display: flex;
