@@ -11,6 +11,12 @@ let yourScore = document.querySelector(".yourScore");
 
 let compScore = document.querySelector(".computerScore");
 
+let scoreDiv = document.querySelector('.scoreDiv');
+
+let playAgain = document.createElement('button');
+
+playAgain.textContent = 'Play Again?';
+
 let humanScore = 0;
 
 let computerScore = 0;
@@ -20,23 +26,23 @@ let computerScore = 0;
 
 rock.addEventListener("click",function() { humanChoice = 'rock';
 playOneRound(getComputerChoice(),humanChoice);
-console.log(humanScore,compScore);
+console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
 if(humanScore === 5 || computerScore === 5){
 
-    if(humanScore === 5) {
+    if(humanScore >= 5) {
 
-        yourScore.textContent = 'YOU WON!'
-        compScore.textContent = ''
+        yourScore.textContent = 'YOU WON!';
+        compScore.textContent = '';
     
-        }else if (computerScore === 5) {
+        }else if (computerScore >= 5) {
     
-            compScore.textContent = 'COMPUTER WON!'
-            yourScore.textContent = ''
-        }
+            compScore.textContent = 'COMPUTER WON!';
+            yourScore.textContent = '';
+        };
 
-}
+};
 });
 
 paper.addEventListener("click",function() { humanChoice = 'paper';
@@ -46,18 +52,18 @@ yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
 if(humanScore === 5 || computerScore === 5){
 
-    if(humanScore === 5) {
+    if(humanScore >= 5) {
 
-        yourScore.textContent = 'YOU WON!'
-        compScore.textContent = ''
+        yourScore.textContent = 'YOU WON!';
+        compScore.textContent = '';
     
-        }else if (computerScore === 5) {
+        }else if (computerScore >= 5) {
     
-            compScore.textContent = 'COMPUTER WON!'
-            yourScore.textContent = ''
-        }
+            compScore.textContent = 'COMPUTER WON!';
+            yourScore.textContent = '';
+        };
     
-}
+};
 });
 
 scissors.addEventListener("click", function() { humanChoice = 'scissors';
@@ -67,23 +73,113 @@ yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
 if(humanScore === 5 || computerScore === 5){
     
-    if(humanScore === 5) {
+    if(humanScore >= 5) {
 
-    yourScore.textContent = 'YOU WON!'
-    compScore.textContent = ''
+    yourScore.textContent = 'YOU WON!';
+    compScore.textContent = '';
 
 
-    }else if (computerScore === 5) {
+    }else if (computerScore >= 5) {
 
-        compScore.textContent = 'COMPUTER WON!'
-        yourScore.textContent = ''
+        compScore.textContent = 'COMPUTER WON!';
+        yourScore.textContent = '';
         //need to add button that asks if you owuld like to play again
         //also note who wins each round, and also put scores back to zero if you choose to play again.
+    };
+    
+};
+});
+
+rock.addEventListener('click', function() {
+
+
+    if (yourScore.textContent == 'YOU WON!'){
+    
+        
+        scoreDiv.insertBefore(playAgain, compScore );
+        rock.style.pointerEvents = 'none';
+        scissors.style.pointerEvents = 'none';
+        paper.style.pointerEvents = 'none';
+    
+        
+    }else if ( compScore.textContent == 'COMPUTER WON!') {
+    
+       
+        scoreDiv.insertBefore(playAgain, compScore );
+        rock.style.pointerEvents = 'none';
+        scissors.style.pointerEvents = 'none';
+        paper.style.pointerEvents = 'none';
+    
+    }
+});
+
+
+scissors.addEventListener('click', function() {
+
+
+if (yourScore.textContent == 'YOU WON!'){
+
+    
+    scoreDiv.insertBefore(playAgain, compScore );
+    scissors.style.pointerEvents = 'none';
+    rock.style.pointerEvents = 'none';
+    paper.style.pointerEvents = 'none';
+    
+}else if ( compScore.textContent == 'COMPUTER WON!') {
+
+    
+    scoreDiv.insertBefore(playAgain, compScore );
+    scissors.style.pointerEvents = 'none';
+    rock.style.pointerEvents = 'none';
+    paper.style.pointerEvents = 'none';
+
+}
+
+});
+
+paper.addEventListener('click', function() {
+
+
+    if (yourScore.textContent == 'YOU WON!'){
+    
+       
+        scoreDiv.insertBefore(playAgain, compScore );
+        scissors.style.pointerEvents = 'none';
+        rock.style.pointerEvents = 'none';
+        paper.style.pointerEvents = 'none';
+        
+    }else if ( compScore.textContent == 'COMPUTER WON!') {
+    
+        
+        scoreDiv.insertBefore(playAgain, compScore );
+        scissors.style.pointerEvents = 'none';
+        rock.style.pointerEvents = 'none';
+        paper.style.pointerEvents = 'none';
+    
     }
     
-}
-})
+    });
 
+
+    playAgain.addEventListener('click', function() {
+
+        playAgain.remove()
+        scissors.style.pointerEvents = 'auto';
+        rock.style.pointerEvents = 'auto';
+        paper.style.pointerEvents = 'auto';
+        computerScore = 0
+        humanScore = 0
+        yourScore.textContent = `Your Score = ${humanScore}`;
+compScore.textContent = `Computer's Score =  ${computerScore}`;
+        
+
+    });
+
+/*/ To disable:    
+document.getElementById('id').style.pointerEvents = 'none';
+// To re-enable:
+document.getElementById('id').style.pointerEvents = 'auto'; 
+*/
 
 
 
