@@ -1,16 +1,19 @@
 //RockPaper scissors//
-let humanChoice
+let humanChoice;
 
-let rock = document.querySelector(".rock")
+let rock = document.querySelector(".rock");
 
-let paper = document.querySelector(".paper")
+let paper = document.querySelector(".paper");
 
-let scissors = document.querySelector(".scissors")
+let scissors = document.querySelector(".scissors");
 
-let yourScore = document.querySelector(".yourScore")
+let yourScore = document.querySelector(".yourScore");
 
-let compScore = document.querySelector(".computerScore")
+let compScore = document.querySelector(".computerScore");
 
+let humanScore = 0;
+
+let computerScore = 0;
 
 
 
@@ -19,19 +22,67 @@ rock.addEventListener("click",function() { humanChoice = 'rock';
 playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,compScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
-compScore.textContent = `Computer's Score =  ${computerScore}`;})
+compScore.textContent = `Computer's Score =  ${computerScore}`;
+if(humanScore === 5 || computerScore === 5){
+
+    if(humanScore === 5) {
+
+        yourScore.textContent = 'YOU WON!'
+        compScore.textContent = ''
+    
+        }else if (computerScore === 5) {
+    
+            compScore.textContent = 'COMPUTER WON!'
+            yourScore.textContent = ''
+        }
+
+}
+});
 
 paper.addEventListener("click",function() { humanChoice = 'paper';
 playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
-compScore.textContent = `Computer's Score =  ${computerScore}`;})
+compScore.textContent = `Computer's Score =  ${computerScore}`;
+if(humanScore === 5 || computerScore === 5){
+
+    if(humanScore === 5) {
+
+        yourScore.textContent = 'YOU WON!'
+        compScore.textContent = ''
+    
+        }else if (computerScore === 5) {
+    
+            compScore.textContent = 'COMPUTER WON!'
+            yourScore.textContent = ''
+        }
+    
+}
+});
 
 scissors.addEventListener("click", function() { humanChoice = 'scissors';
 playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
-compScore.textContent = `Computer's Score =  ${computerScore}`;})
+compScore.textContent = `Computer's Score =  ${computerScore}`;
+if(humanScore === 5 || computerScore === 5){
+    
+    if(humanScore === 5) {
+
+    yourScore.textContent = 'YOU WON!'
+    compScore.textContent = ''
+
+
+    }else if (computerScore === 5) {
+
+        compScore.textContent = 'COMPUTER WON!'
+        yourScore.textContent = ''
+        //need to add button that asks if you owuld like to play again
+        //also note who wins each round, and also put scores back to zero if you choose to play again.
+    }
+    
+}
+})
 
 
 
@@ -43,8 +94,9 @@ compScore.textContent = `Computer's Score =  ${computerScore}`;})
 
 
 
-let computerScore = 0;
-let humanScore = 0;
+
+
+
 
 function getComputerChoice() {
 
