@@ -21,7 +21,7 @@ playAgain.style.cssText = 'font-size:3rem;background-color:green;border:5px soli
 
 playAgain.textContent = 'Play Again?';
 
-const choiceShow = document.querySelector(".choiceShow")
+const choiceShow = document.querySelector(".choiceShow");
 
 let humanScore = 0;
 
@@ -35,7 +35,7 @@ playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
-
+choiceShow.style.visibility = 'visible';
 if(humanScore === 5 || computerScore === 5){
 
     if(humanScore >= 5) {
@@ -57,6 +57,7 @@ playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
+choiceShow.style.visibility = 'visible';
 if(humanScore === 5 || computerScore === 5){
 
     if(humanScore >= 5) {
@@ -78,6 +79,7 @@ playOneRound(getComputerChoice(),humanChoice);
 console.log(humanScore,computerScore);
 yourScore.textContent = `Your Score = ${humanScore}`;
 compScore.textContent = `Computer's Score =  ${computerScore}`;
+choiceShow.style.visibility = 'visible';
 if(humanScore === 5 || computerScore === 5){
     
     if(humanScore >= 5) {
@@ -171,7 +173,7 @@ paper.addEventListener('click', function() {
     playAgain.addEventListener('click', function() {
 
         playAgain.remove()
-        choiceShow.remove()
+        choiceShow.style.visibility = 'hidden'
         scissors.style.pointerEvents = 'auto';
         rock.style.pointerEvents = 'auto';
         paper.style.pointerEvents = 'auto';
@@ -204,7 +206,7 @@ function getComputerChoice() {
 
 function playOneRound ( computerChoice, humanChoice) {
 
-   
+    
     choiceShow.textContent = `You Chose ${humanChoice}  ------  Computer Chose ${computerChoice}`
     //Deal with rock case,scissors case, and paper case
 
