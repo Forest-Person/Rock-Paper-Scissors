@@ -96,13 +96,7 @@ img{
 
 
 
-/*.imageContainer {
 
-    background-color: bisque;
-    
-    display: flex;
-    flex-direction: column;
-}*/
 
 img:hover {  /*Makes the image more opaque upon hover 
              for a button effect*/
@@ -117,7 +111,7 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:3rem;
+    gap:1rem;
     padding-left: 0;
     
 }
@@ -134,7 +128,7 @@ ul {
     background-color: black;
     color:rgb(57, 203, 49);
     padding:.5rem;
-    font-size:3em;
+    font-size:1em;
     
 
     
